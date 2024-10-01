@@ -19,6 +19,6 @@ function updateViewLogin() {
         <br/>Du er logget inn som ${model.app.loggedInAs || '(IKKE)'}
         <div style="color: red">${model.inputs.loginPage.error || ''}</div>
 
-        <button onclick="model.app.loggedInAs = 'terje'; updateView()">.</button>
+        <button onclick="model.app.loggedInAs = 'per'; updateView()">.</button>
     `;
 }

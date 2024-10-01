@@ -21,9 +21,26 @@ const model = {
         },
     },
     themes: [
-        {name: 'light', foreColor: 'black', backColor: 'white'},
-        {name: 'dark', foreColor: 'lightgray', backColor: '#222222'},
-        {name: 'mix', foreColor: 'white', backColor: 'darkblue'},
+        { name: 'light', foreColor: 'black', backColor: 'white' },
+        { name: 'dark', foreColor: 'lightgray', backColor: '#222222' },
+        { name: 'mix', foreColor: 'white', backColor: 'darkblue' },
+    ],
+    users: [
+        {
+            userId: 'per',
+            password: '123',
+            firstName: 'Per',
+        },
+        {
+            userId: 'pål',
+            password: '',
+            firstName: 'Pål',
+        },
+        {
+            userId: 'espen',
+            password: '321',
+            firstName: 'Espen',
+        }
     ],
     movies: [
         {
