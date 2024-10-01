@@ -1,6 +1,6 @@
 const model = {
     app: {
-        loggedInAs: null,
+        loggedInAsUserId: null,
         currentPage: null,
         user: {
             firstName: null,
@@ -9,7 +9,7 @@ const model = {
     },
     inputs: {
         loginPage: {
-            userName: '',
+            userId: '',
             password: '',
             error: '',
         },

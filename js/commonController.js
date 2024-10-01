@@ -4,6 +4,6 @@ function goToPage(pageName) {
 }
 
 function logOut() {
-    model.app.loggedInAs = null;
+    model.app.loggedInAsUserId = null;
     updateView();
 }

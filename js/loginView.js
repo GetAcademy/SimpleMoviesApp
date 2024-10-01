@@ -5,8 +5,8 @@ function updateViewLogin() {
             <div>Brukernavn:</div>
             <input 
                 type="text"
-                oninput="model.inputs.loginPage.userName = this.value" 
-                value="${model.inputs.loginPage.userName || ''}"
+                oninput="model.inputs.loginPage.userId = this.value" 
+                value="${model.inputs.loginPage.userId || ''}"
                 />
             <div>Passord:</div>
             <input 
@@ -16,9 +16,9 @@ function updateViewLogin() {
                 />
         </div>    
         <button onclick="logIn()">Logg inn</button>
-        <br/>Du er logget inn som ${model.app.loggedInAs || '(IKKE)'}
+        <br/>Du er logget inn som ${model.app.loggedInAsUserId || '(IKKE)'}
         <div style="color: red">${model.inputs.loginPage.error || ''}</div>
 
-        <button onclick="model.app.loggedInAs = 'per'; updateView()">.</button>
+        <button onclick="model.app.loggedInAsUserId = 'per'; updateView()">.</button>
     `;
 }

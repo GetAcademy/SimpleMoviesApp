@@ -25,7 +25,7 @@
     <script>
         updateView();
         function updateView() {
-            if (model.app.loggedInAs == null) updateViewLogin();
+            if (model.app.loggedInAsUserId == null) updateViewLogin();
             else if (model.app.currentPage == 'editProfile') updateViewEditProfile();
             else if (model.app.currentPage == 'movies') updateViewMovies();
             else updateViewMain();
