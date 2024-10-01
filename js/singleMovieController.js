@@ -1,0 +1,3 @@
+function addRating(rating, movieId){
+    
+}

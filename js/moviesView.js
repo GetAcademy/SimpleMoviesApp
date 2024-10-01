@@ -11,7 +11,7 @@ function createMoviesHtml(){
     for(let i = 0; i < movies.length; i++){
         const movie = movies[i];
         html += /*HTML*/`
-            <div style="display: flex; gap: 10px">
+            <div class="movie" onclick="showMovie(${movie.id})">
                 <div>
                     <img src="${movie.imageUrl}" style="height: 120px"/>
                 </div>
