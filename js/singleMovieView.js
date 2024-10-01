@@ -1,6 +1,7 @@
 function updateViewSingleMovie() {
     const movieId = model.inputs.singleMovie.movieId;
     const movie = findMovieById(movieId);
+    //const movie = model.movies.find(m => m.movieId == movieId);
     document.getElementById('app').innerHTML = /*HTML*/`
         ${createMenuHTML()}
         <h1>${movie.title}</h1>
@@ -16,12 +17,23 @@ function updateViewSingleMovie() {
         ${createCurrentRatingHtml()}
         <h3>Gi din rating: </h3>
         <div style="display: flex; font-size: 200%">
-            <div onclick="addRating(1, ${movieId})">★</div>
-            <div onclick="addRating(2, ${movieId})">★</div>
-            <div onclick="addRating(3, ${movieId})">★</div>
-            <div onclick="addRating(4, ${movieId})">★</div>
-            <div onclick="addRating(5, ${movieId})">★</div>
+            ${createRatingHtml(movieId, 1)}
+            ${createRatingHtml(movieId, 2)}
+            ${createRatingHtml(movieId, 3)}
+            ${createRatingHtml(movieId, 4)}
+            ${createRatingHtml(movieId, 5)}
         </div>
+    `;
+}
+
+function createRatingHtml(movieId, stars) {
+    const rating = findRating(movieId, model.app.loggedInAsUserId);
+    let style = '';
+    if(rating != null && rating.stars >= stars){
+        style = 'color: #cccc00';
+    }
+    return /*HTML*/`
+        <div style="${style}" class="rating" onclick="addOrEditRating(${stars}, ${movieId})">★</div>    
     `;
 }
 

@@ -1,14 +1,14 @@
-function updateViewMovies(){    
+function updateViewMovies() {
     document.getElementById('app').innerHTML = /*HTML*/`
         <h1>Filmer</h1>
         ${createMoviesHtml()}
     `;
 }
 
-function createMoviesHtml(){
+function createMoviesHtml() {
     const movies = model.movies;
     let html = '';
-    for(let i = 0; i < movies.length; i++){
+    for (let i = 0; i < movies.length; i++) {
         const movie = movies[i];
         html += /*HTML*/`
             <div class="movie" onclick="showMovie(${movie.id})">
