@@ -1,7 +1,7 @@
 const model = {
     app: {
-        loggedInAsUserId: 'terje',
-        currentPage: 'singleMovie',
+        loggedInAsUserId: null,
+        currentPage: null,
         user: {
             firstName: null,
             imageUrl: null,
